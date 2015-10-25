@@ -1,0 +1,51 @@
+﻿body {
+}
+
+.width100{
+    width:100%;
+}
+
+.gridHeaderColumn{
+    text-align:center;
+    background-color:darkgray;
+    color:white;
+    font-size:large;
+}
+
+.evenRow, .evenRow .gridInputCls:disabled
+{
+    background-color:beige;
+}
+
+.oddRow, .oddRow .gridInputCls:disabled{
+    background-color:azure;
+}
+
+.gridRow, .gridHeader
+{
+    height:50px;
+}
+
+.oddRow .gridInputCls:disabled, .evenRow .gridInputCls:disabled
+{
+    border:none;
+}
+.oddRow .gridInputCls, .evenRow .gridInputCls
+{
+    border-radius:10px;
+}
+
+.paddTop
+{
+    padding-top:20px;
+}
+
+.gridBody{
+    height:500px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+.center{
+    text-align:center;
+}

@@ -1,0 +1,42 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row gridHeader">
+                    <div class="col-lg-1 gridHeaderColumn">Deleted</div>
+                    <div class="col-lg-2 gridHeaderColumn">Name</div>
+                    <div class="col-lg-6 gridHeaderColumn">Description</div>
+                    <div class="col-lg-3 gridHeaderColumn">Operations</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <section class="gridBody">
+                    <div ng-repeat="data in gridData">
+                        <div id="gridRow{{$index}}" class="gridRow row" ng-class-even="'evenRow'" ng-class-odd="'oddRow'" ng-mouseover="mg.showButtons($event,$index)" ng-mouseleave="mg.hideButtons($event,$index)">
+                            <div id="firstCol{{$index}}" class="col-lg-1 col-md-1 col-sm-12 center" ng-class-even="'evenRow'" ng-class-odd="'oddRow'">
+                                <input type="checkbox" ng-model="data.RowDelete" disabled />
+                            </div>
+                            <div id="secondCol{{$index}}" class="col-lg-2 col-md-4 col-sm-12" ng-class-even="'evenRow'" ng-class-odd="'oddRow'">
+                                <input id="col2Input{{$index}}" class="gridInputCls width100" type="text" ng-model="data.Name" ng-focus="mg.textBoxFocus" ng-blur="mg.updateDataSource($event,$index)" disabled />
+                            </div>
+                            <div id="thirdCol{{$index}}" class="col-lg-6 col-md-7 col-sm-12" ng-class-even="'evenRow'" ng-class-odd="'oddRow'">
+                                <input id="col3Input{{$index}}" class="gridInputCls width100" type="text" ng-model="data.Description" ng-blur="mg.updateDataSource($event,$index)" disabled />
+                            </div>
+                            <div id="fourthCol{{$index}}" class="col-lg-3 col-md-12 col-sm-12" ng-class-even="'evenRow'" ng-class-odd="'oddRow'" ng-show="mg.Buttons == 'true{{$index}}'">
+                                <button class="btn btn-info" ng-click="mg.editRow($event,$index)">Edit</button>
+                                <button class="btn btn-primary" ng-click="mg.undoChanges($event,$index)">Undo</button>
+                                <button class="btn btn-danger" ng-click="mg.deleteRow($event,$index)">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>

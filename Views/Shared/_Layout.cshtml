@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html ng-app="CustomGrid">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Grid</title>
+    <link rel="stylesheet" href="~/Content/Jquery/jquery-ui.css" />
+    <link rel="stylesheet" href="~/Content/Bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/Bootstrap/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="~/Content/Bootstrap/bootstrap-theme.min.css" />
+
+    <link rel="stylesheet" href="~/Content/Project/customgrid.css" />
+</head>
+<body>
+    <div ng-controller="LayoutController  as ltc">
+        @RenderBody()
+    </div>
+    <script src="~/Scripts/App/Jquery/jquery-2.1.0.js"></script>
+    <script src="~/Scripts/App/Jquery/jquery-ui.js"></script>
+
+    <script src="~/Scripts/App/Angular/angular.min.js"></script>
+    <script src="~/Scripts/App/Angular/angular-ui-router.js"></script>
+    <script src="~/Scripts/App/Bootstrap/bootstrap.min.js"></script>
+    <script src="~/Scripts/App/Angular/ui-bootstrap-tpls-0.10.0.js"></script>
+
+    <script src="~/Scripts/App/Configuration/app.js"></script>
+    <script src="~/Scripts/App/Configuration/routing.js"></script>
+    <script src="~/Scripts/Controllers/LayoutController.js"></script>
+    <script src="~/Scripts/Controllers/IndexController.js"></script>
+    <script src="~/Scripts/Controllers/NavigationController.js"></script>
+    <script src="~/Scripts/Services/CacheService.js"></script>
+    <script src="~/Scripts/Services/MockData.js"></script>
+    <script src="~/Scripts/Directives/Grid.js"></script>
+    <script src="~/Scripts/Directives/GridDataSource.js"></script>
+    <script src="~/Scripts/Services/ControllerDirectiveCommunication.js"></script>
+    <script src="~/Scripts/Services/SaveDataService.js"></script>
+
+</body>
+</html>

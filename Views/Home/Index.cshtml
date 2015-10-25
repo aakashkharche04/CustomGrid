@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" ng-controller="IndexController as ixc">
+    <div class="row">
+        <div class="col-lg-12">
+            <my-grid grid-data="ixc.mockData"></my-grid>
+        </div>
+    </div>
+    <div class="row paddTop">
+        <div class="col-lg-12">
+            <button class="btn btn-success pull-right" ng-click="ixc.saveGridData()">Save Data</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="alert alert-success alert-dismissable" ng-show="ixc.notify">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    &times;
+                </button>
+                {{ixc.message}}
+            </div>
+        </div>
+    </div>
+</div>
